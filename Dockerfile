@@ -3,8 +3,6 @@ FROM registry.access.redhat.com/rhel7.2:latest
 
 MAINTAINER Shah_Zobair
 RUN yum clean all
-RUN subscription-manager repos --enable=rhel-7-server-rpms && subscription-manager repos --enable=rhel-7-server-extras-rpms
- && subscription-manager repos --enable=rhel-7-server-optional-rpms
 RUN yum update -y && \ 
     yum install -y wget tar alternatives && yum clean all
 
