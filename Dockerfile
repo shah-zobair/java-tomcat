@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7.2:latest
+FROM registry.access.redhat.com/rhel6:latest
 #FROM centos:centos7
 
 MAINTAINER Shah_Zobair
