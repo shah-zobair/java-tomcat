@@ -1,10 +1,10 @@
-FROM registry.access.redhat.com/rhel7:latest
+FROM registry.access.redhat.com/rhel7.2:latest
 #FROM centos:centos7
 
 MAINTAINER Shah_Zobair
-RUN yum update -y
-RUN yum install wget tar alternatives -y
-RUN yum clean all
+RUN yum update -y && \ 
+    yum install -y wget tar alternatives && yum clean all
+
 # Prepare environment 
 ENV JAVA_HOME /opt/java
 ENV CATALINA_HOME /opt/tomcat 
