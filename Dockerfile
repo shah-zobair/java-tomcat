@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhel7.2:latest
 #FROM centos:centos7
 
 MAINTAINER Shah_Zobair
-RUN yum clean all
+#RUN yum clean all
 RUN yum update -y && \ 
     yum install -y wget tar alternatives && yum clean all
 
