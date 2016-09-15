@@ -3,7 +3,8 @@ FROM registry.access.redhat.com/rhel7.2:latest
 
 MAINTAINER Shah_Zobair
 #RUN yum clean all
-RUN yum update -y && \ 
+#RUN yum update -y && \ 
+RUN yum --disablerepo='*' --enablerepo=rhel-7-server-rpms update -y && \
     yum install -y wget tar alternatives && yum clean all
 
 # Prepare environment 
