@@ -9,8 +9,9 @@ MAINTAINER Shah_Zobair
 #yum-config-manager --disable rhel-7-server-tus-rpms && \
 #yum update -y && \
 #RUN yum repolist
-RUN yum -y install wget tar
 RUN yum clean all
+RUN yum -y install wget tar
+#RUN yum clean all
 
 # Prepare environment 
 ENV JAVA_HOME /opt/java
