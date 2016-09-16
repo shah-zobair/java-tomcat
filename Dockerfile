@@ -3,15 +3,15 @@ FROM  registry.access.redhat.com/rhel7.2
 
 MAINTAINER Shah_Zobair
 #RUN yum clean all
-RUN yum-config-manager --disable \*-htb-* \*-rt-* \*-eus* \*-ha-* \*-tus-*
-RUN yum-config-manager --enable rhel-7-server-rpms
+#RUN yum-config-manager --disable \*-htb-* \*-rt-* \*-eus* \*-ha-* \*-tus-*
+#RUN yum-config-manager --enable rhel-7-server-rpms
 #RUN yum update -y && \ 
 #RUN yum --disablerepo='*' --disablerepo=rhel-7-server-tus-rpms --enablerepo=rhel-7-server-rpms update -y
 #yum-config-manager --disable rhel-7-server-tus-rpms && \
 #yum update -y && \
 #RUN yum repolist
-RUN yum clean all
-RUN yum -y install wget tar
+#RUN yum clean all
+RUN yum --disablerepo='*' --enablerepo=rhel-7-server-rpms install wget tar -y
 #RUN yum clean all
 
 # Prepare environment 
