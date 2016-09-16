@@ -1,7 +1,7 @@
 FROM  registry.access.redhat.com/rhel7.2
-#FROM centos:centos7
 
 MAINTAINER Shah_Zobair
+
 #RUN yum clean all
 #RUN yum-config-manager --disable \*-htb-* \*-rt-* \*-eus* \*-ha-* \*-tus-*
 #RUN yum-config-manager --enable rhel-7-server-rpms
@@ -11,8 +11,9 @@ MAINTAINER Shah_Zobair
 #yum update -y && \
 #RUN yum repolist
 #RUN yum clean all
+
 RUN yum --disablerepo='*' --enablerepo=rhel-7-server-rpms install wget tar -y
-#RUN yum clean all
+RUN yum clean all
 
 # Prepare environment 
 ENV JAVA_HOME /opt/java
@@ -28,8 +29,8 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 
 
 # Install Tomcat
-RUN wget http://ftp.riken.jp/net/apache/tomcat/tomcat-8/v8.5.4/bin/apache-tomcat-8.5.4.tar.gz && \
- tar -xvf apache-tomcat-8.5.4.tar.gz && \
+RUN wget http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz && \
+ tar -xvf apache-tomcat-8.5.5.tar.gz && \
  rm apache-tomcat*.tar.gz && \
  mv apache-tomcat* ${CATALINA_HOME}
 
