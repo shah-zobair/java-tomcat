@@ -15,4 +15,4 @@ oc logs -f <Build_Pod_Name>
 ```
 
 
-Ref: https://github.com/kirillF/centos-tomcat
+
