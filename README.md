@@ -1,13 +1,13 @@
 # java-tomcat
 
-** Execute from Openshift CLI **
+**Execute from Openshift CLI**
 
 ```
 oc new-project tomcat
 oc new-app https://github.com/shah-zobair/java-tomcat.git
 ```
 
-** Check status **
+**Check status**
 
 ```
 oc get pods
