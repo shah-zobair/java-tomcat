@@ -11,3 +11,6 @@ oc new-app https://github.com/shah-zobair/java-tomcat.git
 oc get pods
 oc logs -f <Build_Pod_Name>
 ```
+
+
+Ref: https://github.com/kirillF/centos-tomcat
