@@ -1,4 +1,4 @@
-FROM rhel7:latest
+FROM rhel7
 #FROM centos:centos7
 
 MAINTAINER Shah_Zobair
